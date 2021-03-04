@@ -1,0 +1,27 @@
+{
+  "name": "hallofcats",
+  "version": "1.0.0",
+  "description": "Gallery of pictures of cats",
+  "main": "index.html",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ison-grazer/HallOfCats.git"
+  },
+  "keywords": [
+    "gallery",
+    "flickr",
+    "api"
+  ],
+  "author": "Isabella Fransson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ison-grazer/HallOfCats/issues"
+  },
+  "homepage": "https://github.com/ison-grazer/HallOfCats#readme"
+}
