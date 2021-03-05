@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 }
 
-// Exported to
+
 function greet() {
   let date = new Date();
   let time = date.getHours();
@@ -85,7 +85,7 @@ function displayInGallery(numPhotos, imageObj) {
     serverID = img.server;
     photoID = img.id;
     photoSecret = img.secret;
-    let description = 'Image of a cat. Title description: ' + img.title;
+    let description = 'Image of a cat. ' + img.title;
 
     images +=
       "<div class='photobox'><img class='pics' src = https://live.staticflickr.com/" +
@@ -102,4 +102,5 @@ function displayInGallery(numPhotos, imageObj) {
 }
 
 init();
+
 module.exports = greet;
