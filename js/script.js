@@ -12,7 +12,8 @@ function init(){
     "'&tag_mode=all&sort=interestingness-desc&extras=description&extras=url_w";    
     
     window.onload = function () {
-        greet();
+        let greeting_msg = greet();
+        document.getElementById('greeting').innerHTML = '<h2>' + greeting_msg + '</h2>';
         requestImages(requestURL);
       }; 
 
@@ -23,19 +24,22 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 }
 
+// Exported to
 function greet() {
   let date = new Date();
   let time = date.getHours();
   let greeting;
-  if (time < 12) {
+  if (time < 12 && time >= 5) {
     greeting = 'Good Morning!';
-  } else if (time < 18) {
+  } else if (time < 18 && time >= 12) {
     greeting = 'Good Afternoon!';
-  } else if (time < 24) {
+  } else if (time < 24 && time >= 18) {
     greeting = 'Good Evening!';
   }
-
-  document.getElementById('greeting').innerHTML = '<h2>' + greeting + '</h2>';
+  else if (time >= 0 && time <= 5) {
+    greeting = 'Good Night!';
+  }
+  return greeting; 
 }
 
 
@@ -98,3 +102,4 @@ function displayInGallery(numPhotos, imageObj) {
 }
 
 init();
+module.exports = greet;
